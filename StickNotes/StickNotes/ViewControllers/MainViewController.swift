@@ -14,8 +14,10 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavBar()
+        tableViewConfig()
     }
     
+    // MARK: - Select button objc method
     @objc func selectButtonTapped() {
         print("button tapped")
     }
@@ -37,6 +39,8 @@ extension MainViewController {
     func tableViewConfig() {
         view.addSubview(tableView)
         
+        tableView.separatorStyle = .none
+        
         tableViewDelegatesSetup()
     }
     
@@ -49,8 +53,31 @@ extension MainViewController {
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+    // MARK: - Sections creation
+    enum TableViewSections: Int, CaseIterable {
+        case searchField, folders, notes
+    }
+    
+    // Sections
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return TableViewSections.allCases.count
+    }
+    
+    // MARK: - Required protocol methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        guard let tableViewSections = TableViewSections(rawValue: section) else {
+            return 0
+        }
+        
+        // 🤨 is that nescessery?
+        switch tableViewSections {
+        case .searchField:
+            return 1
+        case .folders:
+            return 1
+        case .notes:
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
