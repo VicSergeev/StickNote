@@ -10,6 +10,8 @@ import SnapKit
 
 final class SearchTableViewCell: BaseTableViewCell {
     
+    static let identifier = "SearchTableViewCell"
+    
     lazy var searchField: UISearchTextField = {
         let searchTextFiled = UISearchTextField()
         searchTextFiled.translatesAutoresizingMaskIntoConstraints = false
@@ -20,6 +22,7 @@ final class SearchTableViewCell: BaseTableViewCell {
         super.setupViews()
         
         contentView.addSubview(searchField)
+        contentView.backgroundColor = .brown
         
         searchField.snp.makeConstraints { make in
             make.leading.equalTo(16)

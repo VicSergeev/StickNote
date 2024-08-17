@@ -8,7 +8,7 @@
 import UIKit
 
 final class MainViewController: UIViewController {
-    
+        
     var tableView = UITableView()
 
     override func viewDidLoad() {
@@ -40,6 +40,11 @@ extension MainViewController {
         view.addSubview(tableView)
         
         tableView.separatorStyle = .none
+        tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: Cells.searchTextFieldCell)
+        tableView.register(FoldersTableViewCell.self, forCellReuseIdentifier: Cells.foldersCells)
+        tableView.register(NotesTableViewCell.self, forCellReuseIdentifier: Cells.notesCell)
+        tableView.pin(to: view)
+        tableView.contentInset = UIEdgeInsets.zero
         
         tableViewDelegatesSetup()
     }
@@ -48,6 +53,12 @@ extension MainViewController {
     func tableViewDelegatesSetup() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    struct Cells {
+        static let searchTextFieldCell = "SearchTableViewCell"
+        static let foldersCells = "FoldersTableViewCell"
+        static let notesCell = "NotesTableViewCell"
     }
 }
 
@@ -61,6 +72,19 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     // Sections
     func numberOfSections(in tableView: UITableView) -> Int {
         return TableViewSections.allCases.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        switch indexPath.section {
+        case 0:
+            return 50
+        case 1:
+            return 40
+        default:
+            return 400
+        }
+        
     }
     
     // MARK: - Required protocols methods
@@ -81,6 +105,23 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let tableViewSections = TableViewSections(rawValue: indexPath.section)!
+        
+        switch tableViewSections {
+        case .searchField:
+            let searchCell = tableView.dequeueReusableCell(withIdentifier: Cells.searchTextFieldCell, for: indexPath) as! SearchTableViewCell
+            searchCell.backgroundColor = .red
+            return searchCell
+        case .folders:
+            let foldersCell = tableView.dequeueReusableCell(withIdentifier: Cells.foldersCells, for: indexPath) as! FoldersTableViewCell
+            foldersCell.backgroundColor = .blue
+            return foldersCell
+        case .notes:
+            let notesCell = tableView.dequeueReusableCell(withIdentifier: Cells.notesCell, for: indexPath) as! NotesTableViewCell
+            notesCell.backgroundColor = .green
+            return notesCell
+        }
         
     }
     
