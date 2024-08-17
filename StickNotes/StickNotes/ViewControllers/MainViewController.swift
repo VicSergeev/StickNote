@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
     
     var tableView = UITableView()
 
@@ -63,7 +63,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         return TableViewSections.allCases.count
     }
     
-    // MARK: - Required protocol methods
+    // MARK: - Required protocols methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let tableViewSections = TableViewSections(rawValue: section) else {
             return 0
@@ -81,7 +81,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
     }
     
     
