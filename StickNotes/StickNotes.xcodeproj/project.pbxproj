@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5780BFD12C70E01300387D6C /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFD02C70E01300387D6C /* UIView + Ext.swift */; };
+		5780BFD42C70E52200387D6C /* NotesMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFD32C70E52200387D6C /* NotesMockData.swift */; };
+		5780BFD62C70E53700387D6C /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFD52C70E53700387D6C /* Note.swift */; };
 		57D1F46E2C6FEA6200E7EEF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D1F46D2C6FEA6200E7EEF3 /* AppDelegate.swift */; };
 		57D1F4702C6FEA6200E7EEF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D1F46F2C6FEA6200E7EEF3 /* SceneDelegate.swift */; };
 		57D1F4722C6FEA6200E7EEF3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D1F4712C6FEA6200E7EEF3 /* MainViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5780BFD02C70E01300387D6C /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
+		5780BFD32C70E52200387D6C /* NotesMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesMockData.swift; sourceTree = "<group>"; };
+		5780BFD52C70E53700387D6C /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		57D1F46A2C6FEA6200E7EEF3 /* StickNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D1F46D2C6FEA6200E7EEF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57D1F46F2C6FEA6200E7EEF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +43,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5780BFCE2C70DE6900387D6C /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				57D1F4762C6FEA6200E7EEF3 /* StickNotes.xcdatamodeld */,
+				5780BFD32C70E52200387D6C /* NotesMockData.swift */,
+			);
+			path = DataStorage;
+			sourceTree = "<group>";
+		};
+		5780BFCF2C70DE7B00387D6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				57D1F4792C6FEA6400E7EEF3 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5780BFD22C70E01900387D6C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5780BFD02C70E01300387D6C /* UIView + Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5780BFD72C70E53B00387D6C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5780BFD52C70E53700387D6C /* Note.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		57D1F4612C6FEA6200E7EEF3 = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +95,12 @@
 		57D1F46C2C6FEA6200E7EEF3 /* StickNotes */ = {
 			isa = PBXGroup;
 			children = (
-				57D1F4842C6FEAB200E7EEF3 /* Supporting */,
 				57D1F4852C6FEB2200E7EEF3 /* ViewControllers */,
-				57D1F4792C6FEA6400E7EEF3 /* Assets.xcassets */,
-				57D1F47B2C6FEA6400E7EEF3 /* LaunchScreen.storyboard */,
-				57D1F4762C6FEA6200E7EEF3 /* StickNotes.xcdatamodeld */,
+				57D1F4842C6FEAB200E7EEF3 /* Supporting */,
+				5780BFCF2C70DE7B00387D6C /* Resources */,
+				5780BFCE2C70DE6900387D6C /* DataStorage */,
+				5780BFD22C70E01900387D6C /* Extensions */,
+				5780BFD72C70E53B00387D6C /* Models */,
 			);
 			path = StickNotes;
 			sourceTree = "<group>";
@@ -68,6 +108,7 @@
 		57D1F4842C6FEAB200E7EEF3 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				57D1F47B2C6FEA6400E7EEF3 /* LaunchScreen.storyboard */,
 				57D1F46D2C6FEA6200E7EEF3 /* AppDelegate.swift */,
 				57D1F46F2C6FEA6200E7EEF3 /* SceneDelegate.swift */,
 				57D1F47E2C6FEA6400E7EEF3 /* Info.plist */,
@@ -155,8 +196,11 @@
 			files = (
 				57D1F4722C6FEA6200E7EEF3 /* MainViewController.swift in Sources */,
 				57D1F46E2C6FEA6200E7EEF3 /* AppDelegate.swift in Sources */,
+				5780BFD62C70E53700387D6C /* Note.swift in Sources */,
 				57D1F4782C6FEA6200E7EEF3 /* StickNotes.xcdatamodeld in Sources */,
+				5780BFD42C70E52200387D6C /* NotesMockData.swift in Sources */,
 				57D1F4702C6FEA6200E7EEF3 /* SceneDelegate.swift in Sources */,
+				5780BFD12C70E01300387D6C /* UIView + Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
