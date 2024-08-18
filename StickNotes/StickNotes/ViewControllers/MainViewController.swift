@@ -37,6 +37,8 @@ extension MainViewController {
     
     // MARK: - TableView setup
     func tableViewConfig() {
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
         view.addSubview(tableView)
         
         tableView.separatorStyle = .none
@@ -45,6 +47,13 @@ extension MainViewController {
         tableView.register(NotesTableViewCell.self, forCellReuseIdentifier: Cells.notesCell)
         tableView.pin(to: view)
         tableView.contentInset = UIEdgeInsets.zero
+        
+        NSLayoutConstraint.activate([
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
         
         tableViewDelegatesSetup()
     }
@@ -82,9 +91,13 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:
             return 40
         default:
-            return 400
+            return UITableView.automaticDimension
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 600
     }
     
     // MARK: - Required protocols methods
