@@ -22,7 +22,7 @@ final class SearchTableViewCell: BaseTableViewCell {
         super.setupViews()
         
         contentView.addSubview(searchField)
-        contentView.backgroundColor = .brown
+
         
         searchField.snp.makeConstraints { make in
             make.leading.equalTo(16)

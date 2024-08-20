@@ -13,6 +13,12 @@ final class FoldersTableViewCell: BaseTableViewCell {
     
     override func setupViews() {
         super.setupViews()
-        contentView.backgroundColor = .lightGray
+        
+        contentView.snp.makeConstraints { make in
+            make.leading.equalTo(16)
+            make.trailing.equalTo(-16)
+            make.top.equalTo(8)
+            make.bottom.equalTo(-8)
+        }
     }
 }
