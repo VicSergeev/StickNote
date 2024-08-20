@@ -19,5 +19,6 @@ struct Folder {
     var folderName: String
     var notes: [Note]
     var subFolders: [Folder]
+    //
     // ???
 }
