@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5780BFD12C70E01300387D6C /* UIView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFD02C70E01300387D6C /* UIView + Ext.swift */; };
 		5780BFD42C70E52200387D6C /* NotesMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFD32C70E52200387D6C /* NotesMockData.swift */; };
-		5780BFD62C70E53700387D6C /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFD52C70E53700387D6C /* Note.swift */; };
+		5780BFD62C70E53700387D6C /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFD52C70E53700387D6C /* Content.swift */; };
 		5780BFDA2C70E6D000387D6C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5780BFD92C70E6D000387D6C /* SnapKit */; };
 		5780BFDC2C70EAA600387D6C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFDB2C70EAA600387D6C /* BaseTableViewCell.swift */; };
 		5780BFE02C70EAF500387D6C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFDF2C70EAF500387D6C /* SearchTableViewCell.swift */; };
@@ -26,7 +26,7 @@
 /* Begin PBXFileReference section */
 		5780BFD02C70E01300387D6C /* UIView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Ext.swift"; sourceTree = "<group>"; };
 		5780BFD32C70E52200387D6C /* NotesMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesMockData.swift; sourceTree = "<group>"; };
-		5780BFD52C70E53700387D6C /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		5780BFD52C70E53700387D6C /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		5780BFDB2C70EAA600387D6C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		5780BFDF2C70EAF500387D6C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		5780BFE12C70F1B900387D6C /* FoldersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		5780BFD72C70E53B00387D6C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5780BFD52C70E53700387D6C /* Note.swift */,
+				5780BFD52C70E53700387D6C /* Content.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 				57D1F4722C6FEA6200E7EEF3 /* MainViewController.swift in Sources */,
 				57D1F46E2C6FEA6200E7EEF3 /* AppDelegate.swift in Sources */,
 				5780BFE42C71243200387D6C /* NotesTableViewCell.swift in Sources */,
-				5780BFD62C70E53700387D6C /* Note.swift in Sources */,
+				5780BFD62C70E53700387D6C /* Content.swift in Sources */,
 				5780BFE22C70F1B900387D6C /* FoldersTableViewCell.swift in Sources */,
 				57D1F4782C6FEA6200E7EEF3 /* StickNotes.xcdatamodeld in Sources */,
 				5780BFD42C70E52200387D6C /* NotesMockData.swift in Sources */,
