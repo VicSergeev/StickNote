@@ -15,6 +15,7 @@
 		5780BFE02C70EAF500387D6C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFDF2C70EAF500387D6C /* SearchTableViewCell.swift */; };
 		5780BFE22C70F1B900387D6C /* FoldersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFE12C70F1B900387D6C /* FoldersTableViewCell.swift */; };
 		5780BFE42C71243200387D6C /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780BFE32C71243200387D6C /* NotesTableViewCell.swift */; };
+		57BFF9A42C90B76B006E000D /* NotesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57BFF9A32C90B76B006E000D /* NotesCollectionViewCell.xib */; };
 		57D1F46E2C6FEA6200E7EEF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D1F46D2C6FEA6200E7EEF3 /* AppDelegate.swift */; };
 		57D1F4702C6FEA6200E7EEF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D1F46F2C6FEA6200E7EEF3 /* SceneDelegate.swift */; };
 		57D1F4722C6FEA6200E7EEF3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D1F4712C6FEA6200E7EEF3 /* MainViewController.swift */; };
@@ -31,6 +32,7 @@
 		5780BFDF2C70EAF500387D6C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		5780BFE12C70F1B900387D6C /* FoldersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersTableViewCell.swift; sourceTree = "<group>"; };
 		5780BFE32C71243200387D6C /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
+		57BFF9A32C90B76B006E000D /* NotesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesCollectionViewCell.xib; sourceTree = "<group>"; };
 		57D1F46A2C6FEA6200E7EEF3 /* StickNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StickNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D1F46D2C6FEA6200E7EEF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57D1F46F2C6FEA6200E7EEF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				5780BFDE2C70EAC100387D6C /* TVCells */,
+				57BFF9A32C90B76B006E000D /* NotesCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			files = (
 				57D1F47A2C6FEA6400E7EEF3 /* Assets.xcassets in Resources */,
 				57D1F47D2C6FEA6400E7EEF3 /* Base in Resources */,
+				57BFF9A42C90B76B006E000D /* NotesCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
