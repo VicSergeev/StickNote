@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 final class MainViewController: UIViewController {
         
@@ -33,8 +34,9 @@ final class MainViewController: UIViewController {
     }
 
     @objc func addNoteTapped() {
-        // Действие при нажатии на кнопку добавления заметки
-        print("Add Note Tapped")
+        let addNoteVC = AddNoteViewController()
+        let navController = UINavigationController(rootViewController: addNoteVC)
+        present(navController, animated: true, completion: nil)
     }
 
 }
@@ -117,6 +119,9 @@ extension MainViewController {
         static let notesCell = "NotesTableViewCell"
     }
 }
+
+// MARK: - CoreData part
+
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {

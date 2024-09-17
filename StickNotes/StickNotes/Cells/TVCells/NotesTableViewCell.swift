@@ -26,31 +26,38 @@ final class NotesTableViewCell: BaseTableViewCell {
     
     override func setupViews() {
         super.setupViews()
-        
         setupCollectionView()
     }
 }
 
 extension NotesTableViewCell {
-    
     func setupCollectionView() {
-        // delegates
+        contentView.addSubview(notesCollectionView)
+        
+        let nib = UINib(nibName: "NotesCollectionViewCell", bundle: nil)
+        notesCollectionView.register(nib, forCellWithReuseIdentifier: "NotesCollectionViewCell")
+        
+        notesCollectionView.frame = contentView.bounds
+        
+        notesCollectionView.register(NotesCollectionViewCell.self, forCellWithReuseIdentifier: NotesCollectionViewCell.identifier)
+        
         notesCollectionView.dataSource = self
         notesCollectionView.delegate = self
-        
-        // add cv on view
-        notesCollectionView.frame = contentView.bounds
     }
 }
 
 // MARK: - CollectionView delegate & dataSource
 extension NotesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = notesCollectionView.dequeueReusableCell(withReuseIdentifier: "NotesCollectionViewCell", for: indexPath) as! NotesCollectionViewCell
+        
+        cell.backgroundColor = .red
+        
+        return cell
     }
     
     
@@ -59,4 +66,27 @@ extension NotesTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
 // MARK: - CollectionView cell size
 extension NotesTableViewCell: UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let totalWidth = collectionView.bounds.width // Ширина коллекции
+        let totalHeight = collectionView.bounds.height // Высота коллекции
+        
+        let numberOfItemsPerRow: CGFloat = 2 // Количество ячеек в строке
+        let spacing: CGFloat = 1 // Отступ между ячейками
+
+        // Вычисляем ширину ячейки
+        let itemWidth = (totalWidth - (numberOfItemsPerRow - 1) * spacing) / numberOfItemsPerRow
+        let itemHeight = itemWidth // Чтобы сделать ячейки квадратными
+
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1 // Отступ между ячейками по горизонтали
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0 // Отступ между ячейками по вертикали
+    }
+
+
 }
