@@ -16,12 +16,12 @@ final class NotesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var folder: UILabel!
     
-    func configure(with note: Note) {
-        titleLabel.text = note.title
-        descriptionLabel.text = note.content
-        if let date = note.date {
-            dateLabel.text = DateFormatter.localizedString(from: date, dateStyle: .short, timeStyle: .none)
-        }
-    }
+//    func configure(with note: Note) {
+//        titleLabel.text = note.title
+//        descriptionLabel.text = note.content
+//        if let date = note.date {
+//            dateLabel.text = DateFormatter.localizedString(from: date, dateStyle: .short, timeStyle: .none)
+//        }
+//    }
     
 }
